@@ -3,7 +3,7 @@ let TaxiTrips = require("../taxi-trips");
 const pg = require("pg");
 const Pool = pg.Pool;
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://localhost:5432/my_balloon_tests';
+const connectionString = process.env.DATABASE_URL || 'postgresql://coder:201735469@localhost:5432/coderdb';
 
 const pool = new Pool({
     connectionString
@@ -11,15 +11,15 @@ const pool = new Pool({
 
 describe('Taxi Trips', function () {
 
-    // beforeEach(async function () {
-        
-    // });
+     beforeEach(async function () {
+       // await pool.query('delete from ')
+    });
 
     it('should find how many trips all the taxis made', async function () {
 
         const taxiTrips = TaxiTrips(pool);
 
-        assert.equal(0, taxiTrips.totalTripCount());
+        assert.deepEqual([], taxiTrips.totalTripCount());
     
 
     });
@@ -31,7 +31,7 @@ describe('Taxi Trips', function () {
         assert.deepStrictEqual([], taxiTrips.findAllRegions());
 
     });
-
+/*
     it('should find all the taxis for a region', async function () {
         const taxiTrips = TaxiTrips(pool);
 
@@ -80,7 +80,7 @@ describe('Taxi Trips', function () {
         assert.deepStrictEqual(0.00, taxiTrips.findTotalIncome());
     });
 
-
+*/
     after(function () {
         pool.end();
     });
