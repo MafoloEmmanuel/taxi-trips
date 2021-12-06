@@ -8,7 +8,7 @@ node_js:
   
 before_script:
   - psql -c 'create database coderdb;' -U postgres
-  - psql -U postgres -d coderdb -a -f sql/table.sql
+  - psql -U postgres -d coderdb -a -f sql/tables.sql
   - psql -U postgres -d coderdb -a -f sql/data.sql
 
 
