@@ -1,0 +1,16 @@
+language: node_js
+
+env:
+   - DATABASE_URL=postgresql://postgres@localhost:5432/coderdb
+
+node_js:
+- 12
+  
+before_script:
+  - psql -c 'create database coderdb;' -U postgres
+  - psql -U postgres -d coderdb -a -f data.sql
+  - psql -U postgres -d coderdb -a -f table.sql
+
+
+services: 
+  - postgresql
