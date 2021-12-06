@@ -93,10 +93,10 @@ describe('Taxi Trips', function () {
 
         const taxiTrips = TaxiTrips(pool);
         assert.deepStrictEqual([
-            { reg_number: 'CA 25874', income: '225.00' },
             { reg_number: 'BGf 789 GP', income: '162.00' },
-            { reg_number: 'FGP 320 GP', income: '300.00' },
-            { reg_number: 'ND 23451', income: '105.00' }
+            { reg_number: 'ND 23451', income: '105.00' },
+            { reg_number: 'CA 25874', income: '225.00' },
+            { reg_number: 'FGP 320 GP', income: '300.00' }
           ], await taxiTrips.findTotalIncomePerTaxi());
 
     });
