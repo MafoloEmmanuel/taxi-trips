@@ -24,5 +24,8 @@ foreign key (routes_id) references routes(id),
 foreign key (taxi_id) references taxi(id)
 );
 
-
-
+create view saveTotalIncome 
+as select reg_number, sum(routes.fare*taxi.trips_no) as income
+ from routes 
+ join trip on routes.id=trip.routes_id 
+ join taxi on taxi.id=trip.taxi_id group by reg_number;

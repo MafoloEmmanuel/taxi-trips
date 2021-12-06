@@ -30,7 +30,7 @@ insert into routes(id,name,fare) values (75,'Springs', 20.00);
 
 insert into trip(id,taxi_id,routes_id) values (1,1,45);
 insert into trip(id,taxi_id,routes_id) values (2,4,55);
-insert into trip(id,taxi_id,routes_id) values (3,4,65);
+insert into trip(id,taxi_id,routes_id) values (3,7,65);
 insert into trip(id,taxi_id,routes_id) values (4,6,75);
 
 

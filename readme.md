@@ -1,4 +1,5 @@
 # Taxi trips
+[![Build Status](https://app.travis-ci.com/MafoloEmmanuel/taxi-trips.svg?branch=main)](https://app.travis-ci.com/MafoloEmmanuel/taxi-trips)
 
 A local study is looking into the national minibus taxi industry in South Africa and they need help analyzing some data.
 
